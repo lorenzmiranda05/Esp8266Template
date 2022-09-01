@@ -30,6 +30,17 @@
     * For CH340, download [here][CH340 Driver].
 1. Install the USB to UART Driver
 
+<br  />
+
+**lib>Credentials>Crednetials.h**
+1. The text file credentials.h looks like:
+    ```c++
+    #pragma once
+    const char* mcuHostName = "MCU Host Name";
+    const char* modSsid = "Modem SSID";
+    const char* modPassword = "Modem Password";
+    ```
+
 
 <br  />
 
