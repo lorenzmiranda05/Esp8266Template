@@ -41,6 +41,27 @@
     const char* modPassword = "Modem Password";
     ```
 
+<br  />
+
+**Dependency Graph**
+
+|-- credentials
+<br  />
+|-- OTA
+<br  />
+|&nbsp; &nbsp; &nbsp;|-- ArduinoOTA @ 1.0
+<br  />
+|&nbsp; &nbsp; &nbsp;|&nbsp; &nbsp; &nbsp;|-- ESP8266WiFi @ 1.0
+<br  />
+|&nbsp; &nbsp; &nbsp;|&nbsp; &nbsp; &nbsp;|-- ESP8266mDNS @ 1.2
+<br  />
+|&nbsp; &nbsp; &nbsp;|&nbsp; &nbsp; &nbsp;|&nbsp; &nbsp; &nbsp;|-- ESP8266WiFi @ 1.0
+<br  />
+|&nbsp; &nbsp; &nbsp;|-- ESP8266mDNS @ 1.2
+<br  />
+|&nbsp; &nbsp; &nbsp;|&nbsp; &nbsp; &nbsp;|-- ESP8266WiFi @ 1.0
+<br  />
+|&nbsp; &nbsp; &nbsp;|-- ESP8266WiFi @ 1.0
 
 <br  />
 
