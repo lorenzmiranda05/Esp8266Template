@@ -1,6 +1,7 @@
 #include <Arduino.h>
-#include <credentials.h>
+#include <Credentials.h>
 #include <OTA.h>
+#include <TelnetStream.h>
 
 void setup()
 {
@@ -9,6 +10,7 @@ void setup()
   Serial.println("Booting");
 
   setupOTA(mcuHostName, modSsid, modPassword);
+  TelnetStream.begin();
 }
 
 int loopCount = 0;
@@ -17,13 +19,13 @@ void loop()
 {
   ArduinoOTA.handle();
   digitalWrite(LED_BUILTIN, !digitalRead(LED_BUILTIN)); // Blink
-  Serial.println("ESPOTA REEDY");
-  Serial.print("IP address: ");
-  Serial.println(WiFi.localIP());
-  Serial.println("WiFi MAC Address: ");
-  Serial.println(WiFi.macAddress());
+  TelnetStream.println("ESPOTA READY");
+  TelnetStream.print("IP address: ");
+  TelnetStream.println(WiFi.localIP());
+  TelnetStream.println("WiFi MAC Address: ");
+  TelnetStream.println(WiFi.macAddress());
   loopCount = loopCount + 1;
-  Serial.print("Loop Count: ");
-  Serial.println(loopCount);
+  TelnetStream.print("Loop Count: ");
+  TelnetStream.println(loopCount);
   delay(5000);
 }

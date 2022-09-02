@@ -43,9 +43,46 @@
 
 <br  />
 
+**Add Libraries using PlatformIO>Libraries tab**
+1. Search TelnetStream by Juraj Andrassy
+1. Add the exact version of the library to the project
+    ```
+    # RECOMMENDED
+    # Accept new functionality in a backwards compatible manner and patches
+    jandrassy/TelnetStream @ ^1.2.2
+
+    # Accept only backwards compatible bug fixes
+    # (any version with the same major and minor versions, and an equal or greater patch version)
+    jandrassy/TelnetStream @ ~1.2.2
+
+    # The exact version
+    jandrassy/TelnetStream @ 1.2.2
+    ```
+1. Library dependencie(s) will be added in the platformio.ini file
+    ```
+    [env:esp01_1m]
+    platform = espressif8266
+    board = esp01_1m
+    framework = arduino
+    monitor_speed = 921600
+    upload_protocol = espota
+    upload_port = 192.168.1.10
+    lib_deps = jandrassy/TelnetStream@1.2.2
+    ```
+
+<br  />
+
 **Dependency Graph**
 
-|-- credentials
+|-- TelnetStream @ 1.2.2
+<br  />
+|&nbsp; &nbsp; &nbsp;|-- ESP8266WiFi @ 1.0
+<br  />
+|&nbsp; &nbsp; &nbsp;|-- Ethernet @ 2.0.0
+<br  />
+|&nbsp; &nbsp; &nbsp;|&nbsp; &nbsp; &nbsp;|-- SPI @ 1.0
+<br  />
+|-- Credentials
 <br  />
 |-- OTA
 <br  />
@@ -69,8 +106,8 @@
 * [x] Add credentials folder in .gitignore
 * [x] Connect to WiFi using ESP8266WiFi.h and credentials.h libraries
 * [x] Create a basic OTA template
-* [ ] Add TelnetStream to the OTA template
-* [ ] Test TelnetStream using Putty
+* [x] Add TelnetStream to the OTA template
+* [x] Test TelnetStream using Putty or cmd
 * [ ] Add WifiManager to the OTA template
 
 
