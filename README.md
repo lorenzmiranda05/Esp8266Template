@@ -1,4 +1,4 @@
-### **ESP8266 OTA Template**
+### **ESP8266 Template**
 
 ---
 <br  />
