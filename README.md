@@ -15,6 +15,7 @@
     | Radio-Frequency (RF) Module | ESP-01S |
     | System-on-a-Chip (SoC) | ESP8266 |
     <br  />
+1. USB A to ESP-01 Programmer Adaptor
 1. ESP-12F
     <br  />
     <br  />
